@@ -1,0 +1,67 @@
+.section {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 80px 40px;
+  text-align: center;
+}
+
+.heading {
+  font-size: 32px;
+  color: #1a2b4c;
+  margin-bottom: 48px;
+}
+
+.rowWrapper {
+  overflow: hidden;
+  margin-bottom: 24px;
+
+  -webkit-mask-image: linear-gradient(
+    to right,
+    transparent,
+    black 10%,
+    black 90%,
+    transparent
+  );
+  mask-image: linear-gradient(
+    to right,
+    transparent,
+    black 10%,
+    black 90%,
+    transparent
+  );
+}
+
+.row {
+  display: flex;
+  width: max-content;
+  animation: scrollLeft 40s linear infinite;
+}
+
+.row.reverse {
+  animation-name: scrollRight;
+}
+
+.logo {
+  height: 32px;
+  object-fit: contain;
+  flex-shrink: 0;
+  margin-right: 46px;
+}
+
+@keyframes scrollLeft {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+@keyframes scrollRight {
+  from {
+    transform: translateX(-50%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}

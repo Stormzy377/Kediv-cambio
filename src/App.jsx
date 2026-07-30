@@ -3,6 +3,7 @@ import Hero from "./components/Hero/Hero";
 import Features from "./components/FeatureBadges/Features";
 import RatesSection from "./components/RatesSection/RatesSection";
 import RatesTable from "./components/RatesSection/RatesTable"
+import LogosMarquee from "./components/LogosMarquee/LogosMarquee";
 
 function App() {
   return (
@@ -12,6 +13,7 @@ function App() {
       <Features />
       <RatesSection />
       <RatesTable />
+      <LogosMarquee />
     </div>
   );
 }
