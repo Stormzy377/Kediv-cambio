@@ -1,0 +1,61 @@
+.navbar {
+    position: relative;
+    top: 16px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 100;
+
+    width: 90%;
+    max-width: 1200px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 24px;
+}
+
+.logo {
+    font-weight: 700;
+    color: #0f1a2e;
+}
+
+.links {
+    display: flex;
+    gap: 10px;
+    list-style: none;
+}
+
+.links a {
+    color: #1a2b4c;
+    text-decoration: none;
+}
+
+.navLink {
+    display: flex;
+    gap: 10px;
+
+    padding: 10px 20px;
+
+    transition: transform 0.2s ease-in-out;
+}
+
+.navLink:hover {
+  transform: translateY(-10%);
+}
+
+.navLink.active {
+  background-color: #ffffff;
+  color: #1a2b4c;
+}
+
+.alertButton {
+    display: flex;
+    gap: 6px;
+    background-color: #23417c;
+    color: #ffffff;
+    border: none;
+    border-radius: 999px;
+    padding: 10px 30px;
+    font-weight: 600;
+    cursor: pointer;
+}

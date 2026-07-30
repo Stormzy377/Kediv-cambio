@@ -1,0 +1,86 @@
+.section {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 80px 40px;
+}
+
+.header {
+  text-align: left;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin-bottom: 56px;
+}
+
+.title {
+  font-size: 32px;
+  color: #1a2b4c;
+}
+
+.subtitle {
+  font-size: 15px;
+  color: #5a6b8c;
+  max-width: 320px;
+  text-align: right;
+}
+
+.ratesRow {
+  display: flex;
+  justify-content: center;
+  gap: 80px;
+  flex-wrap: wrap;
+}
+
+.rateValue {
+  font-weight: 700;
+  margin-bottom: 4px;
+}
+
+.currency {
+  font-size: 45px;
+  color: #b8c2d9;
+  margin-right: 6px;
+}
+
+.integer {
+  font-size: 48px;
+  color: #1a2b4c;
+}
+
+.decimal {
+  font-size: 45px;
+  color: #b8c2d9;
+}
+
+.rateLabel {
+  font-size: 20px;
+  color: #5a6b8c;
+  margin-bottom: 12px;
+  text-align: center;
+}
+
+.rateChange {
+  font-size: 15px;
+  font-weight: 600;
+  color: #1fa855;
+  margin-bottom: 2px;
+  text-align: center;
+}
+
+.rateMarket {
+  font-size: 13px;
+  color: #9aa6bf;
+  text-align: center;
+}
+
+@media (max-width: 600px) {
+  .header {
+    flex-direction: column;
+  }
+
+  .subtitle {
+    text-align: left;
+  }
+}
