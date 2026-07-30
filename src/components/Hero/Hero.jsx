@@ -1,8 +1,11 @@
 import styles from "./Hero.module.css";
+import useOnScreen from "../../hooks/useOnScreen";
 
 function Hero() {
+  const [ref, isVisible] = useOnScreen();
+
   return (
-    <section className={styles.hero}>
+    <section ref={ref} className={`${styles.hero} ${isVisible ? styles.visible : ''}`}>
 
       <h1 className={styles.title}>
         A informação do câmbio <br />

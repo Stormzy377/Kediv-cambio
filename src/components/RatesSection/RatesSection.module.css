@@ -75,6 +75,77 @@
   text-align: center;
 }
 
+/* Estilização da tabela de análise */
+
+.tableWrapper {
+  max-width: 999px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 64px;
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.tableWrapper.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.table th {
+  text-align: left;
+  font-size: 13px;
+  font-weight: 600;
+  color: #5a6b8c;
+  padding-bottom: 12px;
+  border-bottom: 1px solid #e4e9f2;
+}
+
+.table td {
+  padding: 16px 0;
+  font-size: 15px;
+  color: #1a2b4c;
+  border-bottom: 1px solid #eef1f7;
+}
+
+.table td.positive {
+  color: #1fa855;
+  font-weight: 600;
+}
+
+.table td.negative {
+  color: #e6543f;
+  font-weight: 600;
+}
+
+.ctaWrapper {
+  display: flex;
+  justify-content: center;
+  margin-top: 40px;
+}
+
+.ctaButton {
+  background-color: #1a2b4c;
+  color: #ffffff;
+  border: none;
+  border-radius: 999px;
+  padding: 14px 32px;
+  font-weight: 600;
+  font-size: 15px;
+  cursor: pointer;
+  transition: transform 0.2s ease-in-out;
+}
+
+.ctaButton:hover {
+  transform: scale(1.05);
+}
+
+
 @media (max-width: 600px) {
   .header {
     flex-direction: column;

@@ -1,5 +1,6 @@
 import { Gift, RefreshCw, Repeat, UserX } from "lucide-react";
 import styles from "./Features.module.css";
+import useOnScreen from "../../hooks/useOnScreen";
 
 const features = [
   {
@@ -26,8 +27,10 @@ const features = [
 ];
 
 function Features() {
+  const [ref, isVisible] = useOnScreen();
+
   return (
-    <section className={styles.section}>
+    <section ref={ref} className={`${styles.section} ${isVisible ? styles.visible : ''}`}>
       <h2 className={styles.heading}>
         Informação de carácter indicativo. Não constitui <br />
         aconselhamento financeiro.

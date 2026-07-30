@@ -2,8 +2,11 @@ import useCountUp from "../../hooks/useCountUp";
 import styles from "./RatesSection.module.css";
 
 function RateFigure({ value, label, change, market, isVisible, delay }) {
-  const animatedValue = useCountUp(value, isVisible);
-  const [integerPart, decimalPart] = animatedValue.toFixed(2).split(".");
+  const animatedValue = useCountUp(value, isVisible, 2800);
+
+  const [integerPart, decimalPart] = animatedValue
+  .toLocaleString('en-US', { maximumFractionDigits: 2, maximumFractionDigits: 2 })
+  .split('.');
 
   return (
     <div

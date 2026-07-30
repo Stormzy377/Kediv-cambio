@@ -2,6 +2,7 @@ import Navbar from "./components/Navbar/Navbar";
 import Hero from "./components/Hero/Hero";
 import Features from "./components/FeatureBadges/Features";
 import RatesSection from "./components/RatesSection/RatesSection";
+import RatesTable from "./components/RatesSection/RatesTable"
 
 function App() {
   return (
@@ -10,6 +11,7 @@ function App() {
       <Hero/>
       <Features />
       <RatesSection />
+      <RatesTable />
     </div>
   );
 }
