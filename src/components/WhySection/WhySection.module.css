@@ -1,0 +1,80 @@
+.section {
+    width: 100%;
+    background-color: #1a2b4c;
+    padding: 60px 40px;
+}
+
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+    text-align: center;
+
+    opacity: 0;
+    transform: translateY(24px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.container.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.title {
+    font-size: 40px;
+    color: #ffffff;
+    margin-bottom: 24px;
+}
+
+.paragraph {
+    font-size: 15px;
+    line-height: 1.7;
+    color: #b8c2d9;
+    margin-bottom: 32px;
+}
+
+.ctaButton {
+    background-color: #ffffff;
+    color: #1a2b4c;
+    border: none;
+    border-radius: 999px;
+    padding: 14px 32px;
+    font-weight: 600;
+    font-size: 15px;
+    cursor: pointer;
+    margin-bottom: 64px;
+}
+
+.statsGrid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 32px;
+}
+
+.stat {
+    opacity: 0;
+    transform: translateY(16px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.container.visible .stat {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.statNumber {
+    font-size: 40px;
+    font-weight: 700;
+    color: #ffffff;
+    margin-bottom: 8px;
+}
+
+.statLabel {
+    font-size: 14px;
+    color: #8b9bb3;
+}
+
+@media (max-width: 700px) {
+  .statsGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}

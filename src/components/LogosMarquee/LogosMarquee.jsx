@@ -12,7 +12,8 @@ const topRow = [bai, bfa, standardBank, bna];
 const bottomRow = [bancoKeve, bancoBic, atlantico, caixaAngola];
 
 function LogoRow({ logos, direction }) {
-  const duplicated = [...logos, ...logos];
+  const baseSet = [...logos, ...logos, ...logos];
+  const duplicated = [...baseSet, ...baseSet];
 
   return (
     <div className={styles.rowWrapper}>
