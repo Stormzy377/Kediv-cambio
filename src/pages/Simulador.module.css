@@ -1,0 +1,31 @@
+.page {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 140px 40px 80px;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 24px;
+  margin-bottom: 64px;
+}
+
+.title {
+  font-size: 48px;
+  font-weight: 700;
+  color: #1a2b4c;
+}
+
+.subtitle {
+  font-size: 16px;
+  color: #1a2b4c;
+  max-width: 360px;
+}
+
+.disclaimer {
+  font-size: 12px;
+  color: #d99a3c;
+  margin-top: 8px;
+}
