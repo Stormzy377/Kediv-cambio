@@ -1,15 +1,25 @@
+import CurrencyDropdown from './CurrencyDropdown';
 import styles from './Simulator.module.css';
 
-function CurrencyCard({ label, amount, currency }) {
+function CurrencyCard({ label, amount, currency, onAmountChange, onCurrencyChange, editable }) {
   return (
     <div className={styles.card}>
       <div className={styles.cardHeader}>
         <span className={styles.cardLabel}>{label}</span>
-        <button className={styles.currencySelect}>
-          {currency} <span className={styles.chevron}>⌄</span>
-        </button>
+        <CurrencyDropdown value={currency} onChange={onCurrencyChange} />
       </div>
-      <p className={styles.amount}>{amount}</p>
+
+      {editable ? (
+        <input
+          type="text"
+          inputMode="decimal"
+          className={styles.amountInput}
+          value={amount}
+          onChange={(event) => onAmountChange(event.target.value)}
+        />
+      ) : (
+        <p className={styles.amount}>{amount}</p>
+      )}
     </div>
   );
 }
