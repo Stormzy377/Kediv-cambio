@@ -1,5 +1,7 @@
 import useOnScreen from "../../hooks/useOnScreen";
 import styles from "./RatesSection.module.css";
+import { Link } from "react-router-dom";
+import { ArrowRight } from "lucide-react";
 
 const currencies = [
   {
@@ -36,14 +38,13 @@ const currencies = [
   },
 ];
 
-
 function RatesTable() {
-    const [ref, isVisible] = useOnScreen();
+  const [ref, isVisible] = useOnScreen();
 
-    return (
-        <div
+  return (
+    <div
       ref={ref}
-      className={`${styles.tableWrapper} ${isVisible ? styles.visible : ''}`}
+      className={`${styles.tableWrapper} ${isVisible ? styles.visible : ""}`}
     >
       <table className={styles.table}>
         <thead>
@@ -58,12 +59,14 @@ function RatesTable() {
         <tbody>
           {currencies.map((c) => (
             <tr key={c.code}>
-              <td>{c.code} · {c.name}</td>
+              <td>
+                {c.code} · {c.name}
+              </td>
               <td>{c.buy}</td>
               <td>{c.sell}</td>
               <td>{c.informal}</td>
               <td className={c.change >= 0 ? styles.positive : styles.negative}>
-                {c.change >= 0 ? '↑' : '↓'} {Math.abs(c.change)}%
+                {c.change >= 0 ? "↑" : "↓"} {Math.abs(c.change)}%
               </td>
             </tr>
           ))}
@@ -71,10 +74,15 @@ function RatesTable() {
       </table>
 
       <div className={styles.ctaWrapper}>
-        <button className={styles.ctaButton}>Ver Análises</button>
+        <Link to="/analises" className={styles.ctaButton}>
+          Ver Análises
+          <span className={styles.ctaArrowWrap}>
+            <ArrowRight size={16} />
+          </span>
+        </Link>
       </div>
     </div>
-    );
+  );
 }
 
 export default RatesTable;

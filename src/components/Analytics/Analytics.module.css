@@ -155,3 +155,148 @@
   font-size: 13px;
   color: #8b96b3;
 }
+
+.card {
+  background-color: #ffffff;
+  border: 1px solid #e4e9f2;
+  border-radius: 16px;
+  padding: 28px 32px;
+  margin-bottom: 32px;
+}
+
+.chartHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin-bottom: 20px;
+}
+
+.chartTitle {
+  font-size: 18px;
+  font-weight: 700;
+  color: #1a2b4c;
+}
+
+.chartSubtitle {
+  font-size: 13px;
+  color: #9aa6bf;
+}
+
+.rangeTabs {
+  display: flex;
+  gap: 4px;
+  background-color: #f0f3fa;
+  border-radius: 8px;
+  padding: 4px;
+}
+
+.rangeTab {
+  border: none;
+  background: none;
+  padding: 6px 12px;
+  border-radius: 6px;
+  font-size: 12px;
+  font-weight: 600;
+  color: #6f7da3;
+  cursor: pointer;
+}
+
+.rangeTabActive {
+  background-color: #ffffff;
+  color: #1a2b4c;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.legend {
+  display: flex;
+  gap: 20px;
+  margin-bottom: 12px;
+}
+
+.legendItem {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 13px;
+  color: #5a6b8c;
+}
+
+.legendDotInformal,
+.legendDotBna {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+}
+
+.legendDotInformal {
+  background-color: #d9a441;
+}
+
+.legendDotBna {
+  background-color: #6f7da3;
+}
+
+.chartFootnote {
+  text-align: center;
+  font-size: 12px;
+  color: #9aa6bf;
+  margin-top: 16px;
+  padding-top: 16px;
+  border-top: 1px solid #eef1f7;
+}
+
+.rankTable {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+.rankTable th {
+  text-align: left;
+  font-size: 12px;
+  font-weight: 600;
+  color: #9aa6bf;
+  text-transform: uppercase;
+  padding-bottom: 12px;
+  border-bottom: 1px solid #e4e9f2;
+}
+
+.rankTable td {
+  padding: 14px 0;
+  font-size: 14px;
+  color: #1a2b4c;
+  border-bottom: 1px solid #eef1f7;
+}
+
+.rankRowBest {
+  background-color: #fdf8ec;
+}
+
+.rankDot {
+  display: inline-block;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: #d9a441;
+  margin-right: 8px;
+}
+
+.bestBadge {
+  display: inline-block;
+  color: #19b142;
+  font-size: 10px;
+  font-weight: 700;
+  padding: 2px 8px;
+  margin-left: 8px;
+}
+
+.rankPositive {
+  color: #1fa855;
+  font-weight: 600;
+}
+
+.rankDash {
+  color: #9aa6bf;
+}

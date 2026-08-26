@@ -130,19 +130,43 @@
 }
 
 .ctaButton {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
   background-color: #1a2b4c;
   color: #ffffff;
-  border: none;
+  text-decoration: none;
   border-radius: 999px;
   padding: 14px 32px;
   font-weight: 600;
   font-size: 15px;
   cursor: pointer;
-  transition: transform 0.2s ease-in-out;
+  transition: background-color 0.2s ease;
 }
 
 .ctaButton:hover {
-  transform: scale(1.05);
+  background-color: #ffffff;
+  border: 1px solid #1a2b4c;
+  color: #000;
+}
+
+.ctaArrowWrap {
+  display: inline-flex;
+  align-items: center;
+  overflow: hidden;
+
+  max-width: 0;
+  opacity: 0;
+  margin-left: 0;
+
+  transition: max-width 0.25s ease, opacity 0.25s ease, margin-left 0.25s ease;
+}
+
+.ctaButton:hover .ctaArrowWrap {
+  max-width: 20px;
+  opacity: 1;
+  margin-left: 8px;
 }
 
 
